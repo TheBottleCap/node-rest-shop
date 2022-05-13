@@ -13,6 +13,7 @@ mongoose.connect(
     process.env.MONGO_ATLAS_PW+ 
     '@node-rest-shop.slfof.mongodb.net/node-rest-shop?retryWrites=true&w=majority');
 
+mongoose.Promise = global.Promise;
 
 
 //morgan will log the requests in the terminal so that we could understand what all things are happening here.
