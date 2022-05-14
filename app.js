@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
+const userRoutes = require('./api/routes/users');
 
 //connect to mongoose
 mongoose.connect(
@@ -47,6 +48,7 @@ app.use((req, res, next) =>{
 
 // });
 
+app.use('/users', userRoutes)
 app.use('/orders', orderRoutes)
 app.use('/products', productRoutes) // anything requested to /products will be forwrded to prouct route waali file
 
